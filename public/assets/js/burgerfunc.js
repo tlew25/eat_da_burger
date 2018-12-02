@@ -1,14 +1,14 @@
 // BURGERFUNC.JS FILE //
-
 $(function() {
-    $(".change-burger").on("click", function(event) {
+    $(".change-burger").on("click", function(event) {  
       console.log("click test1");
       var id = $(this).data("id");
       var newBurger = $(this).data("newOrder");
-  
+      var chomp = $('.sound1')[0]; 
       var newBurgerAdd = {
         devoured: newBurger
-      };
+      }; 
+      chomp.play(); 
       console.log(newBurgerAdd);
       // Send the PUT request.
       $.ajax("/api/burgers/"+ id,{
@@ -26,7 +26,7 @@ $(function() {
       );
     });
   
-    $(".create-form").on("submit", function(event) {
+    $(".create-form").on("submit", function(event) { 
       console.log("click test3");
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
