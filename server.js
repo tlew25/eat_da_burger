@@ -21,7 +21,7 @@ app.use(express.json());
 // Set Handlebars.
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-app.use(routes);
+app.use('/', routes);
 // ################################ //
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {

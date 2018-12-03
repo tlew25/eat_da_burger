@@ -4,14 +4,12 @@ $(function() {
       console.log("click test1");
       var id = $(this).data("id");
       var newBurger = $(this).data("newOrder");
-      var chomp = $('.sound1')[0]; 
+
       var newBurgerAdd = {
         devoured: newBurger
-      }; 
-      chomp.play(); 
-      console.log(newBurgerAdd);
+      }
       // Send the PUT request.
-      $.ajax("/api/burgers/"+ id,{
+      $.ajax("/api/cats/" + id,{
         type: "PUT",
         data: newBurgerAdd
       }).then(
@@ -32,12 +30,12 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#bp").val(),
-        devoured: $("[name=devoured]:checked").val()
+        burger_name: $("#bp").val().trim(),
+        devoured: $("[name=devoured]:checked").val().trim()
       };
       console.log(newBurger);
       // Send the POST request.
-      $.ajax("/api/burgers", {
+      $.ajax("/api/burgers/",{
         type: "POST",
         data: newBurger
       }).then(

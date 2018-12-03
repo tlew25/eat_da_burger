@@ -2,52 +2,84 @@ body{
    background-color: #BC3A3C;
    
 }
+
 h2{
-   text-align: center;
-    font-size: 25pt;
-    font-family: 'Sedgwick Ave', cursive;
-    /* font-family: 'Permanent Marker', cursive; */
+   text-align: left;
+    font-size: 19pt;
+    font-family: 'Raleway', sans-serif;
+ 
 }
 h1{
-    text-align: center;
-    font-size: 45pt;
-    font-family: 'Sedgwick Ave', cursive;
+    float: left;
+    overflow: hidden;
+    text-align: left;
+    font-size: 55pt;
+    font-family: 'Raleway', sans-serif;
+/* font-family: 'Roboto Slab', serif;
+font-family: 'PT Serif', serif;
+font-family: 'Work Sans', sans-serif; */
+
+}
+.icon-holder{
+    margin-bottom: 75px;
+}
+#palace-id{
+    margin-top: 20px;
+    margin-left: 10px;
 }
 hr{
     color: #000000;
 }
 label{
-    text-align: center;
-    font-size: 20pt;
-    font-family: 'Sedgwick Ave', cursive;
+    text-align: left;
+    font-size: 12pt;
+    
+    font-family: 'Raleway', sans-serif;
+/* font-family: 'Roboto Slab', serif;
+font-family: 'PT Serif', serif;
+font-family: 'Work Sans', sans-serif; */
+}
+#bp{
+    display: block;
+    margin: auto;
 }
 .row2{
     float: left;
     overflow: hidden;
-    font-size: 18pt;
+    font-size: 15pt;
+    width: 25%;
     padding: 0%;
-  margin-left: 15px;
+  margin-right: 15px;
    border-style: ridge;
    border-color: #000000;
 }
 .row1{
     float: right;
     overflow: hidden;
-    font-size: 18pt;
-    padding: 0%;
+    font-size: 15pt;
+    padding: 0%; 
+    width: 25%;
    border-style: ridge;
    border-color: #000000; 
-   margin-right: 15px;
+   margin-left: 15px;
 }
 .row3{
-    margin-top: 100px;
-    padding: 0;
+    padding: 0%;
+    height: 750px;
+    width: 30%;
+    display: block;
+    margin: auto;
+    border-style: ridge;
+   border-color: #000000; 
+    
 }
 #burgerlist{
     color: #000000;
-    font-family: 'Sedgwick Ave', cursive;
+    font-family: 'Raleway', sans-serif;
+/* font-family: 'Roboto Slab', serif;
+font-family: 'PT Serif', serif;
+font-family: 'Work Sans', sans-serif; */
     text-decoration: none;
-    display: block;
     padding: 0%;
 }
 li{
@@ -56,23 +88,43 @@ li{
 }
 .form-group{
     /* margin-left: 35px; */
-    margin: auto;
-    display: block;
+    /* margin: auto;
+    display: block; */
     padding: 0%;
 }
 .create-form{
-    display: block;
-    padding:0;
+text-align: center;
     
 }
 #burgeradd{
     text-align: center;
+    margin: auto;
+   display: block;
+
 }
 #burgersubmit{
    margin: auto;
    display: block;
    padding: 0;
+   width: 50%;
+   font-family: 'Raleway', sans-serif;
+
 }
 .delete-burger{
     margin-top: 10px;
+}
+.change-burger{
+    margin-bottom: 10px;
+}
+ul, li{
+    display: block;
+    margin: auto;
+    
+}
+input{
+    display: block;
+    margin: auto;
+}
+#bp{
+    margin-right: 10px;
 }

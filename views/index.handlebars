@@ -1,10 +1,13 @@
 {{!-- INDEX --}}
-
-   <center><h1>Burger Palace</h1></center>
-<center><div class="row1">
-   <div class="col-md-4">
+<div class="container">
+  <div class="icon-holder">
+  <h1>Burger Palace</h1>
+  <img id="palace-id" src="/assets/images/palace.png" alt="palace" height="50" width="60">
+   </div>
+<div class="row1">
+   <div class="col-md-3">
 <ul>
-    <h2>Ordered</h2>
+    <h2>Ordered Burgers</h2>
     <hr>
   {{#each burgers}}
     {{#unless devoured}}
@@ -13,9 +16,9 @@
   {{/each}}
 </ul>
 </div> 
-</div></center>
-<center><div class="row2">
-    <div class="col-md-4">
+</div>
+<div class="row2">
+    <div class="col-md-3">
 <ul>
     <h2>Devoured Burgers</h2>
     <hr>
@@ -26,24 +29,30 @@
   {{/each}}
 </ul>
 </div>
-</div></center>
+</div>
 
 <div class="row3">
-    <div id="burgersubmit"class="col-md-4">
-<center><form class="create-form">
+    <div id="burgersubmit"class="col-md-3">
+<form class="create-form">
 <h2 id="burgeradd">Order a Burger</h2>
+  <hr>
   <div class="form-group">
     <label for="bp">Burger Name:</label>
     <input type="text" id="bp" name="name">
   </div>
+  <hr>
 
-  <div class="form-group">
+  <div class="create-group">
     <label for="devoured">Has a burger been devoured or does it need an order?</label><br>
-    <input type="radio" name="devoured" value="1" checked>Devoured<br>
-    <input type="radio" name="devoured" value="0" checked> Order
+    <hr>
+    <br>
+    <input type="radio" name="devoured" value="1" checked>Devoured
+    <input type="radio" name="devoured" value="0" > Order
   </div>
+  <hr>
     <br>
   <button type="submit">Add Burger</button>
-</form></center>
+</form>
+</div>
 </div>
 </div>
