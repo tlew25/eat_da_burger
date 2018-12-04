@@ -93,6 +93,9 @@ font-family: 'Work Sans', sans-serif; */
     text-decoration: none;
     padding: 0%;
 }
+#eaten{
+    color: red;
+}
 li{
     text-decoration: none;
     padding: 0;

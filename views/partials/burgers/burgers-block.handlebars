@@ -4,11 +4,11 @@
     {{!-- burger image --}}
 	<img src="/assets/images/cheeseburger-155659_640.png" alt="burger" height=" 85" width="90">
 	<button class="change-burger" data-id="{{id}}" data-newOrder="{{eaten}}">
-		{{#if eaten}}Order!
+		{{#if eaten}}
 
         {{else}}Devour!
         
         {{/if}}
 	</button>
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+	<button class="delete-burger" data-id="{{this.id}}">REMAKE</button>
 </li>
