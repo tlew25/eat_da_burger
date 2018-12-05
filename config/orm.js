@@ -35,7 +35,7 @@ function printQuestionMarks(num) {
       });
     },
     create: function(table, cols, vals, cb) {
-      console.log("creat test");
+      // console.log("creat test");
       var queryString = "INSERT INTO " + table;
   
       queryString += " (";
@@ -45,13 +45,13 @@ function printQuestionMarks(num) {
       queryString += printQuestionMarks(vals.length);
       queryString += ") ";
   
-      console.log(queryString);
+      // console.log(queryString);
   
       connection.query(queryString, vals, function(err, result) {
         if (err) {
           throw err;
         }
-        console.log("results");
+        // console.log("results");
         cb(result);
       });
     },
@@ -64,7 +64,7 @@ function printQuestionMarks(num) {
       queryString += " WHERE ";
       queryString += condition;
   
-      console.log(queryString);
+      // console.log(queryString);
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;

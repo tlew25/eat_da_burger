@@ -3,8 +3,10 @@ $(function() {
     $(".change-burger").on("click", function(event) {  
       console.log("click test1");
       var id = $(this).data("id");
-      var newBurger = $(this).data("newOrder");
-
+      var newBurger = $(this).attr('data-newOrder')
+      
+      console.log(newBurger);
+      // console.log(typeof isNewBurgerTrue)
       var newBurgerAdd = {
         devoured: newBurger
       };

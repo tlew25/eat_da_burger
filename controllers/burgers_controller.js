@@ -12,19 +12,19 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burgers: data
       };
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
   
   router.post("/api/burgers/", function(req, res) {
-    console.log("");
+    // console.log("");
     burger.create([
       "burger_name", "devoured"
     ], [
       req.body.burger_name, req.body.devoured
     ], function(result) {
-      console.log("controller test");
+      // console.log("controller test");
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
@@ -33,12 +33,13 @@ router.get("/", function(req, res) {
   router.put("/api/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
-    console.log("condition", condition);
-  
+    var isNewBurgerTrue = false;
+    if (req.body.devoured === "true") isNewBurgerTrue = true;
     burger.update({
-      devoured: !req.body.devoured
+      devoured: !isNewBurgerTrue
     }, condition, function(result) {
-      console.log("test update");
+      // console.log("test update");
+      // console.log(result)
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
